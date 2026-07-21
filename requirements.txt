@@ -1,0 +1,12 @@
+fastapi #Framework API
+uvicorn #Motor que enciende la API
+sqlalchemy #Traductor python a SQL para conectarme a PostgreSQL
+psycopg2-binary #Conector especifico de PostgreSQL
+alembic #Para cambios en la base de datos
+python-jose[cryptography] #Crear y verificar tokens JWT
+passlib[bcrypt] #Hashea contraseñas
+python-dotenv #Lee mi archivo .env
+pydantic[email] #Se agrega validacion en formato email
+pytest #testing
+httpx #Http para hacer requests en los tests
+pydantic-settings

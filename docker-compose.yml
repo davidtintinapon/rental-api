@@ -1,0 +1,27 @@
+version: '3.8'
+#Aqui levantamos 2 servicios, api y db
+services:
+  api:
+    build: .
+    ports: #puerto de la computadora 
+      - "8000:8000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    environment: #variables de configuracion de postreSQL
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: rambo7
+      POSTGRES_DB: rental_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes: #para que persistan los datos
+  postgres_data:

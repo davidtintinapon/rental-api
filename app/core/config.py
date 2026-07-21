@@ -1,0 +1,12 @@
+from pydantic_settings import BaseSettings
+
+class Settings(BaseSettings):
+    DATABASE_URL: str 
+    SECRET_KEY: str
+    ALGORITHM: str = "HS256"
+    ACCES_TOKEN_EXPIRE_MINUTES: int = 30
+
+    model_config = {"env_file": ".env", "extra": "ignore"}
+
+#instancia global, en cualquier archivo se accede a settings.DATABASE_URL, etc.
+settings = Settings()
