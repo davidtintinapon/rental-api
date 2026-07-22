@@ -16,7 +16,7 @@ services:
     image: postgres:15
     environment: #variables de configuracion de postreSQL
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: rambo7
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: rental_db
     ports:
       - "5432:5432"
