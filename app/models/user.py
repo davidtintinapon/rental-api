@@ -15,4 +15,4 @@ class User(Base):
     password_hash = Column(String, nullable=False)
     role = Column(Enum(UserRole), default=UserRole.manager, nullable=False)
 
-properties = relationship("Property", back_populates="owner")
+    properties = relationship("Property", back_populates="owner")
