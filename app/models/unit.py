@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship
 from app.database import Base
 import enum
 
-class UnitStatus(enum.Enum):
+class UnitStatus(str, enum.Enum):
     vacant = "vacant"
     occupied = "occupied"
 

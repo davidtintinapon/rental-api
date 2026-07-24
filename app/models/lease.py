@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship
 from app.database import Base
 import enum
 
-class LeaseStatus(enum.Enum):
+class LeaseStatus(str, enum.Enum):
     active = "active"
     terminated = "terminated"
 
